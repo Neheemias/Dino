@@ -66,7 +66,7 @@ login() {
 }
 
 recuperarContra(){
-  this.router.navigate(['/correo'])
+  this.router.navigate(['/correos'])
 
 }
 

@@ -12,7 +12,7 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage),
-    canActivate: [inicioGuard]
+    
   },
   {
     path: 'theme',
@@ -33,18 +33,35 @@ export const routes: Routes = [
     canActivate: [ingresoGuard]
   },
   {
-    path: 'correo',
-    loadComponent: () => import('./pages/correo/correo.page').then( m => m.CorreoPage),
+    path: 'leerqr',
+    loadComponent: () => import('./pages/leerqr/leerqr.page').then( m => m.LeerqrPage),
     
   },
   {
     path: 'preguntas',
-    loadComponent: () => import('./pages/pregunta/pregunta.page').then( m => m.PreguntaPage),
-    
+    loadComponent: () => import('./pages/preguntas/preguntas.page').then( m => m.PreguntasPage)
   },
   {
-    path: 'leerqr',
-    loadComponent: () => import('./pages/leerqr/leerqr.page').then( m => m.LeerqrPage),
-    
+    path: 'correos',
+    loadComponent: () => import('./pages/correos/correos.page').then( m => m.CorreosPage)
+  },
+  {
+    path: 'foro',
+    loadComponent: () => import('./pages/foro/foro.page').then( m => m.ForoPage)
+  },
+  {
+    path: 'correcto',
+    loadComponent: () => import('./pages/correcto/correcto.page').then( m => m.CorrectoPage)
+  },
+  {
+    path: 'incorrecto',
+    loadComponent: () => import('./pages/incorrecto/incorrecto.page').then( m => m.IncorrectoPage)
+  },
+  {
+    path: 'miclase',
+    loadComponent: () => import('./pages/miclase/miclase.page').then( m => m.MiclasePage)
   }
+
+
+
 ];

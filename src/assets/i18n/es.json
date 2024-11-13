@@ -64,5 +64,9 @@
     "ThemePage.Form.DescriptionLabel": "Descripción",
     "ThemePage.Form.DescriptionPlaceholder": "Escribe aquí una descripción...",
     "ThemePage.Form.ToggleLabel": "Activar notificaciones",
-    "ThemePage.Form.CheckboxLabel": "Acepto los términos"
+    "ThemePage.Form.CheckboxLabel": "Acepto los términos",
+
+    "System.Assistance.Title":"Sistema de Asistencia Duoc",
+
+    "System.Title":"Recuperar contraseña"
 }

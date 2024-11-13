@@ -2,8 +2,12 @@ import { NivelEducacional } from './nivel-educacional';
 import { Persona } from "./persona";
 import { Asistencia } from '../interfaces/asistencia';
 import { DataBaseService } from '../services/data-base.service';
-import { Optional } from '@angular/core';
+import { Injectable, Optional } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+
+@Injectable({
+  providedIn: 'root',
+  })  // Proporciona la clase Usuario en toda la aplicación
 
 export class Usuario extends Persona {
 
@@ -105,11 +109,11 @@ export class Usuario extends Persona {
   }
 
   async recibirUsuario(activatedRoute: ActivatedRoute, router: Router) {
-    activatedRoute.queryParams.subscribe(async () => { // Cambiar a async
+    activatedRoute.queryParams.subscribe(async () =>  { // Cambiar a async
       const nav = router.getCurrentNavigation();
       if (nav) {
         if (nav.extras.state) {
-          const cuenta = nav.extras.state ['cuenta'];
+          const cuenta = nav.extras.state ['cuenta '];
           const password = nav.extras.state['password'];
           const usuarioInstance = new Usuario(this.db); // Crear instancia
           const usu = await usuarioInstance.buscarUsuarioValido(cuenta, password); // Usar await
